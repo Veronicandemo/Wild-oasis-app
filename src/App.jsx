@@ -1,11 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Product from "./pages/Product";
 import Pricing from "./pages/Pricing";
-
 import PageNotFound from "./pages/PageNotFound";
 import AppLayout from "./pages/AppLayout";
-import Homepage from "./pages/HomePage";
 import Login from "./pages/Login";
+import Homepage from "./pages/HomePage";
 
 const App = () => {
   return (
