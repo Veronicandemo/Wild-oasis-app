@@ -57,5 +57,5 @@ function City() {
     </div>
   );
 }
-
+export { formatDate };
 export default City;
