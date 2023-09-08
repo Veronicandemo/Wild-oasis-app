@@ -5,7 +5,7 @@ import Pricing from "./pages/Pricing";
 import PageNotFound from "./pages/PageNotFound";
 import AppLayout from "./pages/AppLayout";
 import Login from "./pages/Login";
-import Homepage from "./pages/HomePage";
+import Homepage from "./pages/Homepage";
 import CityList from "./Components/CityList";
 import CountryList from "./Components/CountryList";
 const BASE_URL = "http://localhost:8000";
