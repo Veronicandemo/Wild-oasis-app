@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import styles from "./COuntryList.module.css";
+import styles from "./CountryList.module.css";
 import Spinner from "./Spinner";
 import Message from "./Message";
 import CountryItem from "./CountryItem";
@@ -19,7 +19,7 @@ const CountryList = ({ cities, isLoading }) => {
   return (
     <ul className={styles.countryList}>
       {countries.map((country) => (
-        <CountryItem country={country} key={country} />
+        <CountryItem country={country} key={country.country} />
       ))}
     </ul>
   );

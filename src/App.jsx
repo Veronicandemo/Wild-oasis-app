@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Product from "./pages/Product";
 import Pricing from "./pages/Pricing";
@@ -8,6 +8,8 @@ import Login from "./pages/Login";
 import Homepage from "./pages/Homepage";
 import CityList from "./Components/CityList";
 import CountryList from "./Components/CountryList";
+import City from "./Components/City";
+import Form from "./Components/Form";
 const BASE_URL = "http://localhost:8000";
 
 const App = () => {
@@ -38,19 +40,18 @@ const App = () => {
         <Route path="login" element={<Login />} />
 
         <Route path="app" element={<AppLayout />}>
-          <Route
-            index
-            element={<CityList cities={cities} isLoading={isLoading} />}
-          />
+          <Route index element={<Navigate replace to="cities" />} />
           <Route
             path="cities"
             element={<CityList cities={cities} isLoading={isLoading} />}
           />
+          <Route path="cities/:id" element={<City />} />
           <Route
             path="countries"
             element={<CountryList cities={cities} isLoading={isLoading} />}
           />
-          <Route path="form" element={<p>List of countires</p>} />
+
+          <Route path="form" element={<Form />} />
         </Route>
         {/* creates a route that does not match the ones above */}
         <Route path="*" element={<PageNotFound />} />
